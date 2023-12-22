@@ -1,4 +1,4 @@
-let isEnabled = false;
+let isEnabled = true;
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.enabled !== undefined) {
