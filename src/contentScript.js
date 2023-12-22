@@ -9,7 +9,7 @@ function clickGemDropButton() {
             if (chatAside) {
                 const gemDropButton = chatAside.querySelector("button");
   
-                if (gemDropButton.innerText.includes('1,000')) {  
+                if (gemDropButton.innerText.includes('Count me in!')) {  
                     gemDropButton.click();
                 }
             }
@@ -21,4 +21,4 @@ function clickGemDropButton() {
 clickGemDropButton();
 
 // Check for the button every 5 seconds (adjust the interval as needed)
-setInterval(clickGemDropButton, 5000);
+setInterval(clickGemDropButton, 10000);
