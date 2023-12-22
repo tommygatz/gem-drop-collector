@@ -12,20 +12,20 @@ document.addEventListener('DOMContentLoaded', function () {
       gemDropCheckbox.checked = response.enabled;
     });
 
-    // Set initial state based on the checkbox
-    updateToggleState();
+    // // Set initial state based on the checkbox
+    // updateToggleState();
 
-    // Handle slider click to toggle checkbox state
-    toggleSlider.addEventListener('click', function () {
-      gemDropCheckbox.checked = !gemDropCheckbox.checked;
-      // Trigger the change event manually to update the extension state
-      gemDropCheckbox.dispatchEvent(new Event('change'));
-      // Update the toggle state after the click
-      updateToggleState();
-    });
+    // // Handle slider click to toggle checkbox state
+    // toggleSlider.addEventListener('click', function () {
+    //   gemDropCheckbox.checked = !gemDropCheckbox.checked;
+    //   // Trigger the change event manually to update the extension state
+    //   gemDropCheckbox.dispatchEvent(new Event('change'));
+    //   // Update the toggle state after the click
+    //   // updateToggleState();
+    // });
 
-    function updateToggleState() {
-      toggleSlider.style.backgroundColor = gemDropCheckbox.checked ? '#4CAF50' : '#ccc';
-      toggleSlider.style.transform = gemDropCheckbox.checked ? 'translateX(30px)' : 'translateX(0)';
-    }
+    // function updateToggleState() {
+    //   toggleSlider.style.backgroundColor = gemDropCheckbox.checked ? '#4CAF50' : '#ccc';
+    //   toggleSlider.style.transform = gemDropCheckbox.checked ? 'translateX(30px)' : 'translateX(0)';
+    // }
 });
