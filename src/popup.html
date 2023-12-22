@@ -2,12 +2,60 @@
 <html>
 <head>
   <style>
-    body {
-      width: 300px;
+body {
+      width: 200px;
       padding: 10px;
+      font-family: Arial, sans-serif;
     }
-    #checkboxTitle {
-      font-size: 10pt;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .toggle-container {
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+    }
+
+    .toggle-slider {
+      width: 60px;
+      height: 30px;
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 30px;
+      transition: 0.4s;
+    }
+
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .toggle-slider {
+      background-color: #4CAF50;
+    }
+
+    input[type="checkbox"]:checked + .toggle-slider:before {
+      transform: translateX(30px);
     }
     .attribution {
       font-size: 8pt;
@@ -15,10 +63,15 @@
   </style>
 </head>
 <body>
-  <label id="checkboxTitle">
-    <input type="checkbox" id="gemDropCheckbox"> Enable Gem Drop Automator
-  </label><br>
+  <label for="gemDropCheckbox">
+    <input type="checkbox" id="gemDropCheckbox">
+    <div class="toggle-container">
+      <div class="toggle-slider"></div>
+    </div>
+    Enable Gem Drop Automator
+  </label>
   <a href="https://www.flaticon.com/free-icons/gem" title="gem icons" class="attribution">Icons created by Freepik - Flaticon</a>
   <script src="popup.js"></script>
 </body>
 </html>
+
