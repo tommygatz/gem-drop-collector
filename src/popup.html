@@ -3,26 +3,28 @@
 <head>
   <style>
 body {
-      width: 300px;
-      padding: 10px;
+      width: 250px;
+      padding: 5px 5px 0 5px;
       font-family: Arial, sans-serif;
-      display: inline-block;
-      justify-content: center;
-    }
-
-    span {
       display: flex;
-      flex-direction: column;
-      position: relative;
-      width: 100%;
       flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
 
     .toggle-container {
       position: relative;
-      display: flex;
+      display: inline;
       width: 60px;
       height: 34px;
+    }
+
+    span {
+      position:relative;
+      display: inline;
+      padding-left: 10px;
+      font-size: 12pt;
     }
 
     .toggle-slider {
@@ -45,6 +47,7 @@ body {
       left: 4px;
       bottom: 4px;
       background-color: white;
+
       -webkit-transition: .4s;
       transition: .4s;
     }
@@ -56,7 +59,7 @@ body {
     }
 
     input:checked + .toggle-slider {
-      background-color: #4CAF50;
+      background-color: #58a3e0;
     }
 
     input:checked + .toggle-slider:before {
@@ -72,10 +75,16 @@ body {
 
     .toggle-slider.round:before {
       border-radius: 50%;
+      background-image: url("icons/gemicon16.png");
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .attribution {
-      font-size: 8pt;
+      display: inline;
+      position: relative;
+      font-size: 7pt;
+      padding-top: 10px;
     }
 
   </style>
@@ -86,8 +95,8 @@ body {
     <div class="toggle-slider round"></div>
   </label>
 
-  <span>Enable</span>
-
+  <span>Enable Auto Gem Drop</span>
+  <!-- <br><br> -->
   <a href="https://www.flaticon.com/free-icons/gem" title="gem icons" class="attribution">Icons created by Freepik - Flaticon</a>
   <script src="popup.js"></script>
 </body>
