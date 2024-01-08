@@ -9,10 +9,7 @@ function clickGemDropButton() {
             if (chatAside) {
                 const gemDropButton = chatAside.querySelector("button");
   
-                // if (gemDropButton.innerText.includes('Count me in!')) {  
-                //     gemDropButton.click();
-                // }
-                if (gemDropButton.innerText.includes('1,000')) {  
+                if (gemDropButton.innerText.includes('Count me in!')) {  
                     gemDropButton.click();
                 }
             }
